@@ -1,7 +1,7 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c ft_check_format.c ft_printf.c
+SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c ft_check_format.c ft_printf.c ft_put_address.c
 
 NAME = mylib.a
 HEADER = head.h

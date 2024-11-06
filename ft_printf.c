@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:42:40 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/05 23:34:28 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:32:48 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,6 @@ int ft_printf(const char *format, ...)
 		if(*format == '%')
 			len += check_format(*++format, ar , &len);
 
-		// else
-		// {
-		// 	printf("hi");
-		// 	if (*format)
-		// 	{
-		// 		ft_putchar(*format);
-		// 		len++;
-
-		// 	}
-		// 	else
-		// 		return len;
-		// }
 		format++;
 	}
 	va_end(ar);
