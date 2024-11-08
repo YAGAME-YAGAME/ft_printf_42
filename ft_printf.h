@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_format.c                                  :+:      :+:    :+:   */
+/*   head.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 17:15:04 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/06 13:44:38 by otzarwal         ###   ########.fr       */
+/*   Created: 2024/11/05 11:14:29 by otzarwal          #+#    #+#             */
+/*   Updated: 2024/11/07 18:32:24 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "head.h"
+#ifndef HEAD_H
+#define HEAD_H
 
-int			check_format(char str,va_list ar, int *len)
-{
+#include <stdarg.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
 
-	int l = *len;
-	if (str == 'c')
-	{
-		ft_putchar(*(va_arg(ar, char *)));
-		l++;
+typedef unsigned char byte_t;
 
-	}
-	else if (str == 'd')
-	{
-		ft_putnbr(va_arg(ar, int));
-	}
-	else if (str == 's')
-	{
-		ft_putstr(va_arg(ar, char *));
-	}
-	return (l);
-}
+int 		ft_printf(const char *fotmar, ...);
+
+int			ft_putstr(char *str);
+
+int			ft_puthexa(unsigned long n, char c);
+
+int 		ft_putchar(char c);
+
+
+int			ft_putnbr(long long nbr);
+
+int			check_format( va_list ar, char format);
+
+#endif

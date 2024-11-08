@@ -6,15 +6,20 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:40:10 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/05 12:02:05 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:21:51 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "head.h"
+#include "ft_printf.h"
 
-void ft_putstr(char *str)
+int  ft_putstr(char *str)
 {
-	while (*str)
-		ft_putchar(*str++);
+	int len;
 
+	len = 0;
+	if (str == NULL)
+		return (ft_putstr("(null)"));
+	while (*str)
+		len += ft_putchar(*str++);
+	return (len);
 }

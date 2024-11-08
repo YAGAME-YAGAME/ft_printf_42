@@ -1,9 +1,9 @@
-CC = cc
+NAME = printf.a
+CC = clang
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c ft_check_format.c ft_printf.c ft_put_address.c
+SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c  _printf.c
 
-NAME = mylib.a
 HEADER = head.h
 
 OBJ = $(SRC:.c=.o)

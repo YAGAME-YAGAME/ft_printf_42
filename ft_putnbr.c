@@ -6,28 +6,33 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:33:14 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/05 11:38:35 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:22:24 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "head.h"
+#include "ft_printf.h"
 
-void	ft_putnbr(int nbr)
+int	ft_putnbr(long long nbr)
 {
+	int len;
+
+	len = 0;
 	if (nbr == -2147483648)
-		write(1, "-2147483648", 11);
+		len += write(1, "-2147483648", 11);
 	else if (nbr >= 10)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		len += ft_putnbr(nbr / 10);
+		len += ft_putnbr(nbr % 10);
 	}
 	else if (nbr < 0)
 	{
 		nbr *= -1;
-		write(1, "-", 1);
+		len += write(1, "-", 1);
 		ft_putnbr(nbr);
 	}
 	else
-		ft_putchar(nbr + 48);
+		len +=ft_putchar(nbr + 48);
+
+	return (len);
 }

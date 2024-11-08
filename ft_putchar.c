@@ -6,13 +6,13 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:17:09 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/05 11:18:00 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/07 23:22:11 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "head.h"
+#include "ft_printf.h"
 
-void 	ft_putchar(char c)
+int 	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
