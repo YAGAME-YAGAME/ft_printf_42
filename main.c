@@ -20,6 +20,8 @@ int main(void)
     printf("Length:[%d, %i]\n", len2, len2);
     ft_printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
+    ft_printf("Negative:[%d]\n", -2147483648);
+    printf("Negative:[%ld]\n", -2147483648);
     ft_printf("Unsigned:[%u]\n", ui);
     printf("Unsigned:[%u]\n", ui);
     ft_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
@@ -34,7 +36,7 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     ft_printf("Len:[%d]\n", len2);
     printf("Len:[%d]\n", len);
-    ft_printf("%s", str);
+    ft_printf("%s\n", str);
     printf("%s\n", str);
 
     printf("\001\002\007\v\010\f\r\n");
@@ -43,6 +45,9 @@ int main(void)
     i = ft_printf("%p p %p %p", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
     ft_printf("\n%d\n", i);
     i = printf("%p p %p %p", (void *)LONG_MAX + 423856, (void *)0, (void *)INT_MAX);
-    printf("\n%d", i);
+    printf("\n%d\n", i);
+
+	ft_printf("{%s} , {%d} , {%i}, {%x} , {%X}, {%p} \n", "otmane", 27, 1997, 'o', 'O', "otmane");
+	printf("{%s} , {%d} , {%i}, {%x} , {%X}, {%p} ", "otmane", 27, 1997, 'o', 'O', "otmane");
     return (0);
 }

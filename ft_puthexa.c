@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 11:16:09 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/07 23:22:18 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:52:35 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	ft_puthexa(unsigned long n, char c)
 
 	if (n >= 16)
 	{
-		ft_puthexa(n / 16, c);
-		ft_puthexa(n % 16, c);
+		len  += ft_puthexa(n / 16, c);
+		len += ft_puthexa(n % 16, c);
 	}
 	else
 	{

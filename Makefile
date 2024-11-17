@@ -1,8 +1,8 @@
-NAME = printf.a
+NAME = libftprintf.a
 CC = clang
 CFLAGS = -Wall -Wextra -Werror
 
-SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c  _printf.c
+SRC =  ft_putstr.c  ft_putchar.c  ft_puthexa.c ft_putnbr.c  ft_printf.c
 
 HEADER = head.h
 
