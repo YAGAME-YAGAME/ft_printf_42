@@ -16,16 +16,16 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-int						ft_printf(const char *fotmar, ...);
+int	ft_printf(const char *fotmar, ...);
 
-int						ft_putstr(char *str);
+int	ft_putstr(char *str);
 
-int						ft_puthexa(unsigned long n, char c);
+int	ft_puthexa(unsigned long n, char c);
 
-int						ft_putchar(char c);
+int	ft_putchar(char c);
 
-int						ft_putnbr(long long nbr);
+int	ft_putnbr(long long nbr);
 
-int						check_format(va_list ar, char format);
+int	check_format(va_list ar, char format);
 
 #endif

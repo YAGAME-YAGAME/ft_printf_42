@@ -15,8 +15,7 @@
 int	ft_puthexa(unsigned long n, char c)
 {
 	int		len;
-	char *base;
-
+	char	*base;
 
 	if (c == 'x')
 		base = "0123456789abcdef";

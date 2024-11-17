@@ -6,7 +6,7 @@
 /*   By: otzarwal <otzarwal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 10:42:40 by otzarwal          #+#    #+#             */
-/*   Updated: 2024/11/17 19:13:50 by otzarwal         ###   ########.fr       */
+/*   Updated: 2024/11/17 20:17:03 by otzarwal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ int	check_format(va_list args, char format)
 		len += ft_putchar((va_arg(args, int)));
 	else if (format == 'i' || format == 'd')
 		len += ft_putnbr(va_arg(args, int));
-
 	else if (format == 'u')
 		len += ft_putnbr(va_arg(args, unsigned int));
-
 	else if (format == 's')
 		len += ft_putstr(va_arg(args, char *));
 	else if (format == 'p')
@@ -50,7 +48,6 @@ int	ft_printf(const char *s, ...)
 	if (write(1, "", 0) == -1)
 		return (-1);
 	va_start(ar, s);
-
 	while (s[i])
 	{
 		if (s[i] == '%' && s[i + 1])
@@ -62,9 +59,7 @@ int	ft_printf(const char *s, ...)
 				len += check_format(ar, s[i]);
 		}
 		else if (s[i] != '%')
-		{
 			len += ft_putchar(s[i]);
-		}
 		i++;
 	}
 	va_end(ar);
